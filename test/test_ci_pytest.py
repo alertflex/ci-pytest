@@ -9,6 +9,7 @@ class TestCiPytest:
             "http://192.168.1.20:8080/alertflex-ctrl/rest/posture",  # url
             1000,  # delay
             "DockerConfig",  # scan type
+            "OnlyNew", # alert correlation
             "/root/downloads/altprobe-docker",  # target
             "devhost",  # host
             "node01",  # node

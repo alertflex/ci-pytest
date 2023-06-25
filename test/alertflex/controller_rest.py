@@ -9,15 +9,17 @@ class ControllerRest:
     url = ""
     delay = 1000
     posture_type = ""
+    alert_corr = ""
     target = ""
     node = ""
     host = ""
     project = ""
 
-    def __init__(self, url, delay, posture_type, target, host, node, project):
+    def __init__(self, url, delay, posture_type, alert_corr, target, host, node, project):
         self.url = url
         self.delay = delay
         self.posture_type = posture_type
+        self.alert_corr = alert_corr
         self.target = target
         self.host = host
         self.node = node
@@ -63,6 +65,7 @@ class ControllerRest:
     def convert_params_to_json(self):
         return "{\"delay\": " + str(self.delay) + "," + \
                "\"postureType\": \"" + self.posture_type + "\"," + \
+               "\"alertCorr\": \"" + self.alert_corr + "\"," + \
                "\"target\": \"" + self.target + "\"," + \
                "\"host\": \"" + self.host + "\"," + \
                "\"node\": \"" + self.node + "\"," + \
